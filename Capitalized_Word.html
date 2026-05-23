@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitalize Each Word in a Sentence </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+
+        }
+
+        li {
+            display: block;
+            margin: 10px 0;
+            list-style: none;
+            list-style: 15px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ques: Capitalize Each Word in a Sentence : Day 28</h1>
+        <h3> Problem: Given a string (sentence), return the same string but with the first letter of each word
+            capitalized. </h3>
+        <p> Today we’re diving into a very frequently asked string manipulation problem – Capitalizing the first letter
+            of every word in a sentence.</p>
+
+        <div class="card">
+            <ul>
+                <li>🧠 Explanation: Solution Approach:</li>
+                <li> 1️⃣ Split the sentence by spaces.</li>
+                <li>2️⃣ Loop through each word and:</li>
+                <li> 👉 Uppercase the first character.</li>
+                <li>👉 Add the rest of the word unchanged.</li>
+                <li>3️⃣ Join them back with a space.</li>
+                <li>trim the space into the result </li>
+            </ul>
+        </div>
+        <div class="card">
+            <ul>
+                <li>🧠 Interview Tip: </li>
+                <li> </li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+
+        // function capitalizeWord(str) {
+        //     if (typeof str !== 'string' || str.length === 0) {
+        //         return 'Invalid input';
+        //     }
+        //     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+        // }
+
+        // function capitalizeWord(str) {
+        //     if (typeof str !== 'string' || str.length === 0) {
+        //         return 'Invalid input';
+        //     }
+        //     debugger;
+        //     str = str.split(' ');
+        //     let res = '';
+        //     for (word of str){
+        //         res += word.charAt(0).toUpperCase()+ word.slice(1).toLowerCase()+ ' ';           
+
+        //     }
+        //     return res.trim();
+        // }
+
+        // console.log(capitalizeWord('hello world i am js developer')); 
+
+        function capitilizeString(str) {
+            let result = '';
+            if (!str.trim() || typeof str != "string") {
+                return "invalid String"
+            }
+
+            str = str.split(/\s+/);
+            console.log(str)
+            for (word of str) {
+                result += word.charAt(0).toUpperCase() + word.slice(1).toLowerCase() + " ";
+            }
+            return result.trim();
+
+
+        }
+
+        console.log(capitilizeString(" JAVA    script"))
+
+
+    </script>
+
+</body>
+
+</html>
